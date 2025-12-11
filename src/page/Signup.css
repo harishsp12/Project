@@ -1,0 +1,55 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.contain{
+    height: 100vh;
+    background: linear-gradient(to right,#c19548,#49948a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box{
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background-color: rgb(227, 34, 166);
+    border: 1px solid black;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.signup{
+    color: chartreuse;
+    font-size: 2rem;
+}
+
+.txt{
+    font-size: 1.2rem;
+}
+
+.inp-box{
+    width: 300px;
+    padding: 8px;
+    /* border: 20px; */
+    
+}
+
+.inp-color{
+    background: linear-gradient( to right,rgb(240, 120, 120) , rgb(114, 234, 114));
+    font-size: 1.5rem;
+    color: rgb(38, 0, 255);
+    border: none;
+}
+
+.inp-color:hover{
+    background: linear-gradient( to right , rgb(114, 234, 114),rgb(240, 120, 120));
+    
+}

@@ -1,0 +1,39 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+
+
+.wrap{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.wrap-form{
+    height: 400px;
+    width: 400px;
+    background-color: blueviolet;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.inp-box{
+    padding: 10px;
+    width: 300px;
+}
+
+.btn-color{
+   background: linear-gradient( to right,rgb(240, 120, 120) , rgb(114, 234, 114));
+   border: none;
+}
