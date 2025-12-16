@@ -2,10 +2,13 @@
 import React, { useState } from 'react'
 import "./Login.css"
 import { ToastContainer , toast } from 'react-toastify'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Login() {
+  
   const[username,setusername]= useState('')
     const[password,setpassword]= useState('')
+    const navigate = useNavigate();
 
     const[oldusername, setOldUsername] = useState(localStorage.getItem("Username"))
     const[oldpassword,setOldPassword] = useState(localStorage.getItem("Password"))
@@ -13,22 +16,32 @@ function Login() {
      const handleLogin = (e)=>{
          e.preventDefault()
 
-         if(oldusername === username && oldpassword === password ){
+         
+
+        if(oldusername != username){
+            toast.error("username not match")
+        }
+        else if(oldpassword != password){
+           toast.error("password is wrong")
+        }
+        else if(oldusername === username && oldpassword === password ){
              toast.success("Login success")
 
              setTimeout(()=>{
-                 window.location.href='/dashboard'
+                 navigate("/dashboard");
              },3000)
-         }else{
-            
-             toast.error("Login error")
+         }
 
+         
+         else{
             
+             toast.error("Login error")  
          }
         }
     
   return (
     <>
+    
     <div className='wrap'>
         <ToastContainer/>
        
@@ -49,7 +62,14 @@ function Login() {
 
             <button type='submit'  className='inp-box btn-color'>Login1</button>
 
-      </form>
+
+<Link 
+  to="/" 
+  style={{ color: "white", textDecoration: "none" }}
+>
+  signup
+</Link>      </form>
+      
     </div>
     </>
   )
