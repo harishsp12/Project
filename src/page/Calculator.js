@@ -7,7 +7,7 @@ function Calculator() {
         fetch("http://localhost:8080/employee/all")
         .then(response =>{
             if(!response.ok){
-                throw new Error("Network response was not ok")          // throw new Error  this is a key word
+                throw new Error("Network response was not ok")          // throw , new , Error  this is a key word
             }
             // console.log(response)
             return response.json();
@@ -18,12 +18,11 @@ function Calculator() {
         })
         .catch(error => {
             console.error('There has been a problem with your fetch operation:',error)
-            
         })
-    },[])           //depentance array
+    },[])           //   depentance array
 
-   
     console.log(data)
+
 
 
   return (

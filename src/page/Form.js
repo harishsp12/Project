@@ -25,10 +25,10 @@ function Form() {
     };
 
     try {
-      const response = await fetch('https://dummyjson.com/products/add', requestOptions);
+      const response = await fetch('http://localhost:8080/employee/add', requestOptions);
       if (!response.ok) {
         throw new Error('Failed to add product');
-      }
+      } 
       const result = await response.json();
       console.log('Product added successfully!', result);
     } catch (error) {
